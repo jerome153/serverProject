@@ -1,12 +1,15 @@
 const express = require('express');
+require('./services/passport');
+
+
+
 const app = express();
 
-app.get('/', (req, res) =>  {
+require('./routes/authRoutes')(app);
 
-res.send({bye: 'buddy'});
-});
 
-const PORT = process.env.PORT || 5000;
-app.listen(5000);
+
+const PORT = process.env.PORT || 1000;
+app.listen(PORT);
 
 //localhost:5000
