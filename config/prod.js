@@ -1,9 +1,11 @@
+//prod.js - production keys here
 module.exports = {
-  googleClientID:'1023000135403-6qv7jurl9ov0dn3tfv8f48l95nsan2p8.apps.googleusercontent.com',
-  googleClientSecret:'jDl6vErmrV828lDuXEyKbqh3',
+  googleClientID: process.env.GOOGLE_CLIENT_ID,
+  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
 
-  mongoURI: 'mongodb+srv://p00r:DN0Gdj75ObhMrpvU@cluster0-oy6ut.mongodb.net/<dbname>?retryWrites=true&w=majority',
-  cookieKey: 'eWpAIpyt9HEtadOgv',
+
+  mongoURI: process.env.MONGO_URI,
+  cookieKey: process.env.COOKIE_KEY,
   //eWpAIpyt9HEtadOg
   //mongodb+srv://myUser:fewfef323@cluster0.e9dfe.mongodb.net/test?retryWrites=true&w=majority
   //mongodb+srv://myUser:<password>@cluster0-e9dfe.mongodb.net/test?retryWrites=true&w=majority
