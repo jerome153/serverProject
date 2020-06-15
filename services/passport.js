@@ -27,19 +27,15 @@ passport.use(
       proxy: true
 
     },
-    (accessToken, refreshToken, profile, done) => {
-      User.findOne({ googleId: profile.id }).then(existingUser => {
+    async (accessToken, refreshToken, profile, done) => {
+    const existingUser = await User.findOne({ googleId: profile.id })
         if (existingUser) {
-          //we already have a record with the given profile // IDEA:
+
           done(null, existingUser);
         }
-        else {
-          //we don't have a user record iwth this ID, make a new TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q
-          new User({ googleId: profile.id })
-          .save()
-          .then(user => done(null, user));
+          const user = await new User({ googleId: profile.id }).save()
+          done(null, user);
         }
-      });
-    }
+
   )
 );
