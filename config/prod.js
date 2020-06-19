@@ -7,8 +7,8 @@ module.exports = {
   mongoURI: process.env.MONGO_URI,
   cookieKey: process.env.COOKIE_KEY,
 
-  //stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-  //stripeSecretKey: process.env.STRIPE_SECRET_KEY
+  stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+  stripeSecretKey: process.env.STRIPE_SECRET_KEY
   //eWpAIpyt9HEtadOg
   //mongodb+srv://myUser:fewfef323@cluster0.e9dfe.mongodb.net/test?retryWrites=true&w=majority
   //mongodb+srv://myUser:<password>@cluster0-e9dfe.mongodb.net/test?retryWrites=true&w=majority
