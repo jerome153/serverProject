@@ -8,7 +8,8 @@ module.exports = {
 
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
-  sendGridKey: process.env.SEND.GRID.KEY
+  sendGridKey: process.env.SEND.GRID.KEY,
+  redirectDomain: process.env.REDIRECT_DOMAIN,
 
   //eWpAIpyt9HEtadOg
   //mongodb+srv://myUser:fewfef323@cluster0.e9dfe.mongodb.net/test?retryWrites=true&w=majority
