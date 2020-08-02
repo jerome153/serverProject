@@ -16,7 +16,7 @@ module.exports = app => {
   });
 
   app.post("/api/surveys/webhooks", (req, res) => {
-    const p = new Path("/api/surveys/:surveyId/choice");
+    const p = new Path("/api/surveys/:surveyId/:choice");
 
     const events = _.chain(req.body)
       .map(({ email, url }) => {
@@ -28,7 +28,7 @@ module.exports = app => {
       .compact()
       .uniqBy("email", "surveyId")
       .value();
-
+    x;
     console.log(events);
 
     res.send({});
