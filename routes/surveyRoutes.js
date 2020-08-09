@@ -28,7 +28,7 @@ module.exports = app => {
       .compact()
       .uniqBy("email", "surveyId")
       .value();
-    x;
+
     console.log(events);
 
     res.send({});
